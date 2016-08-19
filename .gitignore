@@ -1,0 +1,6 @@
+out/
+ebin/
+_build/
+.idea/
+*.iml
+rebar.lock
