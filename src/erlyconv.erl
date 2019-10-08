@@ -44,7 +44,7 @@ to_unicode(CP, Text) when
     CP =:= cp1254;     CP =:= cp1255;     CP =:= cp1256;     CP =:= cp1257;
     CP =:= atarist;    CP =:= cp424;      CP =:= cp856;      CP =:= cp1006;
     CP =:= koi8r;      CP =:= koi8u;      CP =:= kps9566;    CP =:= kz1048;
-    CP =:= cp1258
+    CP =:= cp1258;     CP =:= cp1047
     -> CP:to_unicode(Text);
 
 %% Additional mappings
@@ -84,7 +84,8 @@ to_unicode(windows_1254, Text)          -> to_unicode(cp1254, Text);
 to_unicode(windows_1255, Text)          -> to_unicode(cp1255, Text);
 to_unicode(windows_1256, Text)          -> to_unicode(cp1256, Text);
 to_unicode(windows_1257, Text)          -> to_unicode(cp1257, Text);
-to_unicode(windows_1258, Text)          -> to_unicode(cp1258, Text).
+to_unicode(windows_1258, Text)          -> to_unicode(cp1258, Text);
+to_unicode(ibm_latin_1, Text)           -> to_unicode(cp1047, Text).
 
 
 -spec from_unicode(CP, Text) -> Unicode when
@@ -111,7 +112,7 @@ from_unicode(CP, Text) when
     CP =:= cp1254;     CP =:= cp1255;     CP =:= cp1256;     CP =:= cp1257;
     CP =:= atarist;    CP =:= cp424;      CP =:= cp856;      CP =:= cp1006;
     CP =:= koi8r;      CP =:= koi8u;      CP =:= kps9566;    CP =:= kz1048;
-    CP =:= cp1258
+    CP =:= cp1258;     CP =:= cp1047 
     -> CP:from_unicode(Text);
 
 %% Additional mappings
@@ -151,4 +152,5 @@ from_unicode(windows_1254, Text)          -> from_unicode(cp1254, Text);
 from_unicode(windows_1255, Text)          -> from_unicode(cp1255, Text);
 from_unicode(windows_1256, Text)          -> from_unicode(cp1256, Text);
 from_unicode(windows_1257, Text)          -> from_unicode(cp1257, Text);
-from_unicode(windows_1258, Text)          -> from_unicode(cp1258, Text).
+from_unicode(windows_1258, Text)          -> from_unicode(cp1258, Text);
+from_unicode(ibm_latin_1, Text)           -> from_unicode(cp1047, Text).

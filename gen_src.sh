@@ -19,6 +19,7 @@ perl gen_src.pl mappings/ISO8859/8859-16.TXT iso8859_16
 perl gen_src.pl mappings/MICSFT/EBCDIC/CP037.TXT cp037
 perl gen_src.pl mappings/MICSFT/EBCDIC/CP500.TXT cp500
 perl gen_src.pl mappings/MICSFT/EBCDIC/CP1026.TXT cp1026
+perl gen_src.pl mappings/MICSFT/EBCDIC/CP1047.TXT cp1047
 
 perl gen_src.pl mappings/MICSFT/MAC/CYRILLIC.TXT cp10007
 perl gen_src.pl mappings/MICSFT/MAC/GREEK.TXT cp10006
