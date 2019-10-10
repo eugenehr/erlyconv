@@ -17,13 +17,13 @@
 
 -module(erlyconv).
 -author("Eugene Khrustalev <eugene.khrustalev@gmail.com>").
--compile([export_all]).
+-export([to_unicode/2, from_unicode/2]).
 
 
 -spec to_unicode(CP, Text) -> Unicode when
     CP :: atom(),
     Text :: char() | string() | binary(),
-    Unicode :: char() | string() | binary().
+    Unicode :: char() | string() | binary() | {error, not_supported_charset}.
 %%
 %% @doc Convert text from the given character set to the unicode
 %%
@@ -85,13 +85,14 @@ to_unicode(windows_1255, Text)          -> to_unicode(cp1255, Text);
 to_unicode(windows_1256, Text)          -> to_unicode(cp1256, Text);
 to_unicode(windows_1257, Text)          -> to_unicode(cp1257, Text);
 to_unicode(windows_1258, Text)          -> to_unicode(cp1258, Text);
-to_unicode(ibm_latin_1, Text)           -> to_unicode(cp1047, Text).
+to_unicode(ibm_latin_1, Text)           -> to_unicode(cp1047, Text);
+to_unicode(_, _)                        -> {error, not_supported_charset}.
 
 
 -spec from_unicode(CP, Text) -> Unicode when
     CP :: atom(),
     Text :: char() | string() | binary(),
-    Unicode :: char() | string() | binary().
+    Unicode :: char() | string() | binary() | {error, not_supported_charset}.
 %%
 %% @doc Convert text from the unicode to the given character set
 %%
@@ -153,4 +154,5 @@ from_unicode(windows_1255, Text)          -> from_unicode(cp1255, Text);
 from_unicode(windows_1256, Text)          -> from_unicode(cp1256, Text);
 from_unicode(windows_1257, Text)          -> from_unicode(cp1257, Text);
 from_unicode(windows_1258, Text)          -> from_unicode(cp1258, Text);
-from_unicode(ibm_latin_1, Text)           -> from_unicode(cp1047, Text).
+from_unicode(ibm_latin_1, Text)           -> from_unicode(cp1047, Text);
+from_unicode(_, _)                        -> {error, not_supported_charset}.
