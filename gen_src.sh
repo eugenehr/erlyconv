@@ -35,6 +35,7 @@ perl gen_src.pl mappings/MICSFT/PC/CP850.TXT cp850
 perl gen_src.pl mappings/MICSFT/PC/CP852.TXT cp852
 perl gen_src.pl mappings/MICSFT/PC/CP855.TXT cp855
 perl gen_src.pl mappings/MICSFT/PC/CP857.TXT cp857
+perl gen_src.pl mappings/MICSFT/PC/CP858.TXT cp858
 perl gen_src.pl mappings/MICSFT/PC/CP860.TXT cp860
 perl gen_src.pl mappings/MICSFT/PC/CP861.TXT cp861
 perl gen_src.pl mappings/MICSFT/PC/CP862.TXT cp862

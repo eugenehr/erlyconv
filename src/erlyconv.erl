@@ -44,7 +44,7 @@ to_unicode(CP, Text) when
     CP =:= cp1254;     CP =:= cp1255;     CP =:= cp1256;     CP =:= cp1257;
     CP =:= atarist;    CP =:= cp424;      CP =:= cp856;      CP =:= cp1006;
     CP =:= koi8r;      CP =:= koi8u;      CP =:= kps9566;    CP =:= kz1048;
-    CP =:= cp1258;     CP =:= cp1047
+    CP =:= cp1258;     CP =:= cp1047;     CP =:= cp858
     -> CP:to_unicode(Text);
 
 %% Additional mappings
@@ -113,7 +113,7 @@ from_unicode(CP, Text) when
     CP =:= cp1254;     CP =:= cp1255;     CP =:= cp1256;     CP =:= cp1257;
     CP =:= atarist;    CP =:= cp424;      CP =:= cp856;      CP =:= cp1006;
     CP =:= koi8r;      CP =:= koi8u;      CP =:= kps9566;    CP =:= kz1048;
-    CP =:= cp1258;     CP =:= cp1047 
+    CP =:= cp1258;     CP =:= cp1047;     CP =:= cp858
     -> CP:from_unicode(Text);
 
 %% Additional mappings
