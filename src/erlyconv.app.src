@@ -1,6 +1,6 @@
 {application, erlyconv, [
     {description, "erlyconv"},
-    {vsn, "20191010"},
+    {vsn, "20210708"},
     {registered, []},
     {applications, [kernel, stdlib]}
 ]}.
